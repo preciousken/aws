@@ -8,8 +8,8 @@ var AWS = require('aws-sdk');
 // Create S3 service object
 var s3 = new AWS.S3({
     apiVersion: '2006-03-01',
-    accessKeyId: "AKIAYWJO3BOPETHZSMNI",
-    secretAccessKey: 'irktgqP7lT8sqaHO4G7cQWCRnPuTc5HEamorQS9e',
+    accessKeyId: "<YOUR_ACCESSKEY>",
+    secretAccessKey: '<YOUR_SECRETKEY>',
     // ACL:'public-read'
 }
 );
