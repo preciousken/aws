@@ -3,11 +3,14 @@ var AWS = require('aws-sdk');
 // Set the region 
 // AWS.config.update({region: 'REGION'});
 
+
+
 // Create S3 service object
 var s3 = new AWS.S3({
     apiVersion: '2006-03-01',
-    accessKeyId: "irktgqP7lT8sqaHO4G7cQWCRnPuTc5HEamorQS9e",
-    secretAccessKey: 'AKIAYWJO3BOPETHZSMNI'
+    accessKeyId: "AKIAYWJO3BOPETHZSMNI",
+    secretAccessKey: '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',
+    // ACL:'public-read'
 }
 );
 
@@ -15,7 +18,8 @@ var s3 = new AWS.S3({
 var uploadParams = {
     Bucket: process.argv[2], 
     Key: '', 
-    Body: ''
+    Body: '',
+    ACL:'public-read'
 };
 var file = process.argv[3];
 

@@ -4,17 +4,16 @@ var AWS = require('aws-sdk');
 // AWS.config.update({region: 'REGION'});
 
 // Create S3 service object
-s3 = new AWS.S3( {
-        apiVersion: '2006-03-01',
-        accessKeyId: "irktgqP7lT8sqaHO4G7cQWCRnPuTc5HEamorQS9e",
-        secretAccessKey: 'AKIAYWJO3BOPETHZSMNI'
+s3 = new AWS.S3({
+    apiVersion: '2006-03-01',
+    accessKeyId: "AKIAYWJO3BOPETHZSMNI",
+    secretAccessKey: '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'
 }
 );
 
 // Create the parameters for calling createBucket
 var bucketParams = {
-    // Bucket : process.argv[2]
-    Bucket : 'bucket_name'
+    Bucket : process.argv[2]
 };
 
 // call S3 to create the bucket
