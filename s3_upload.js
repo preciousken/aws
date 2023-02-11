@@ -1,15 +1,16 @@
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
+var fs = require('fs');
 // Set the region 
 // AWS.config.update({region: 'REGION'});
-
+require('dotenv').config()
 
 
 // Create S3 service object
 var s3 = new AWS.S3({
     apiVersion: '2006-03-01',
-    accessKeyId: "AKIAYWJO3BOPETHZSMNI",
-    secretAccessKey: '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',
+    accessKeyId: process.env.accessKeyId,
+    secretAccessKey: process.env.accessKeyId,
     // ACL:'public-read'
 }
 );
@@ -24,7 +25,6 @@ var uploadParams = {
 var file = process.argv[3];
 
 // Configure the file stream and obtain the upload parameters
-var fs = require('fs');
 var fileStream = fs.createReadStream(file);
 fileStream.on('error', function(err) {
   console.log('File Error', err);
