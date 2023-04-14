@@ -9,8 +9,8 @@ s3 = new AWS.S3({
     accessKeyId: "<YOUR_ACCESSKEY>",
     secretAccessKey: '<YOUR_SECRETKEY>',
 }
-);
 
+);
 // Call S3 to list the buckets
 s3.listBuckets(function(err, data) {
   if (err) {
@@ -19,3 +19,4 @@ s3.listBuckets(function(err, data) {
     console.log("Success", data.Buckets);
   }
 });
+// yop---
