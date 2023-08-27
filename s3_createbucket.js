@@ -10,6 +10,7 @@ s3 = new AWS.S3({
     secretAccessKey: '<YOUR_SECRETKEY>',
 }
 );
+//
 
 // Create the parameters for calling createBucket
 var bucketParams = {
